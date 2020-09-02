@@ -11,7 +11,10 @@ namespace Library
         clase aparte ya que son datos del lugar del appointment. Movería el dato de doctorName 
         a una clase Doctor ya que son datos del doctor. Haría estos cambios
         ya que si no esta clase conocería datos que no están relacionados con un appointment de 
-        primera mano y no cumpliría el SRP.
+        primera mano y no cumpliría el SRP. De esta manera para cambiar cualquier validación 
+        en los datos iría a sus clases correspondientes, para agregar datos lo mismo y en caso
+        de necesitar nuevos detalles para un appointment puedo crear nuevas clases y requerirlas
+        en una clase Appointment.
     */
     public class AppointmentService
     {
