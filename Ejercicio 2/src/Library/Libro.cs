@@ -17,12 +17,5 @@ namespace SRP
             this.Autor = autor;
             this.Codigo = codigo;
         }
-
-        public void AlmacenarLibro(String sector, String estante)
-        {
-            this.SectorBiblioteca = sector;
-            this.EstanteBiblioteca = estante;
-        }
-
     }
 }
