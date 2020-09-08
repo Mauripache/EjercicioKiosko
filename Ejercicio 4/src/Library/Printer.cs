@@ -11,8 +11,8 @@ namespace GameOfLife
         public void ConsolePrint(Game game)
         {
             bool[,] b = game.Board.Board;
-            int width = game.Board.Board.GetLength(1);
-            int height = game.Board.Board.GetLength(2);
+            int width = b.GetLength(0);
+            int height = b.GetLength(1);
             while (true)
             {
                 Console.Clear();
