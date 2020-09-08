@@ -10,6 +10,9 @@ namespace GameOfLife
             bool[,] gameArray = fileParser.ParseFile("./BoardFile.txt");
 
             GameBoard gameBoard = new GameBoard(gameArray);
+            Game newGame = new Game(gameBoard);
+            Printer printer = new Printer();
+            printer.ConsolePrint(newGame);
         }
     }
 }

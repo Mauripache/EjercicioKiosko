@@ -12,7 +12,8 @@ namespace GameOfLife
             this.Board = gameBoard;
         }
 
-        public ApplyLogic()
+
+        public void ApplyLogic()
         {
             bool[,] gameBoard =  Board.Board;
             int boardWidth = gameBoard.GetLength(0);
