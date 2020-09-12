@@ -4,6 +4,13 @@ using System.Collections;
 
 namespace GameOfLife
 {
+    /*
+        Conoce las reglas y recibe por parametro un board del tipo de objeto GameBoard
+        solamente utiliza la propiedad del objeto y le aplica las reglas del juego.
+        Solamente se encarga de conocer las reglas y aplicarlas cumple con SRP.
+        Se podria colocar la logica dentro del objeto GameBoard ya que es el que conoce
+        directamente el board, pero de esta manera el GameBoard puede ser cualquier cosa.
+    */
     public class Game
     {
         public GameBoard Board{get;set;}
@@ -11,7 +18,6 @@ namespace GameOfLife
         {
             this.Board = gameBoard;
         }
-
 
         public void ApplyLogic()
         {
@@ -64,7 +70,7 @@ namespace GameOfLife
 
             gameBoard = cloneboard;
             cloneboard = new bool[boardWidth, boardHeight];
-            this.Board.Board = cloneboard;
+            this.Board = new GameBoard(gameBoard);
         }
     }
 }

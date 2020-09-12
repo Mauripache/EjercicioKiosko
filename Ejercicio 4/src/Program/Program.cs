@@ -12,7 +12,10 @@ namespace GameOfLife
             GameBoard gameBoard = new GameBoard(gameArray);
             Game newGame = new Game(gameBoard);
             Printer printer = new Printer();
-            printer.ConsolePrint(newGame);
+            while (true)
+            {  
+                printer.ConsolePrint(newGame);
+            }
         }
     }
 }
